@@ -18,7 +18,7 @@ puzzle game built using javascript ⛏️
 
 ## 💻 Check It Out
 
-[![Website](https://img.shields.io/badge/Visit_Website-1f1f1f?style=for-the-badge&logo=website&logoColor=white)](https://nextarz.github.io/Puzzel-game/)
+[![Website](https://img.shields.io/badge/Visit_Website-1f1f1f?style=for-the-badge&logo=github&logoColor=white)](https://nextarz.github.io/Puzzel-game/)
 
 ---
 **have a good time**
