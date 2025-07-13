@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puzzle Gambar 3x3</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Lobby -->
+    <div class="lobby" id="lobby">
+      <h1>Puzzle Gambar 3x3</h1>
+      <button id="playBtn">▶ Play</button>
+    </div>
+
+    <!-- Game -->
+   <audio id="shuffleSound" src="sound/audio.mp3" preload="auto" loop></audio>
+    <div id="countdownText" class="text-white text-xl mb-4 text-center hidden"></div>
+    <div class="game" id="game" style="display: none;">
+      <div id="infoBar">
+        <span id="timer">🕒 05:00</span>
+        <button id="resetBtn">🔄 Reset</button>
+      </div>
+      <div class="puzzle" id="puzzle"></div>
+      <p id="winMessage" style="display:none; margin-top:10px; color:lime;">🎉 Anda Menang!</p>
+      <p id="loseMessage" style="display:none; margin-top:10px; color:red;">❌ Waktu Habis!</p>
+    </div>
+  </div>
+
+  <script src="JS/script.js"></script>
+</body>
+</html>
