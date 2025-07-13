@@ -20,5 +20,4 @@ puzzle game built using javascript ⛏️
 
 [![Website](https://img.shields.io/badge/Visit_Website-1f1f1f?style=for-the-badge&logo=github&logoColor=white)](https://nextarz.github.io/Puzzel-game/)
 
----
-**have a good time**
+**✨ have good time**
