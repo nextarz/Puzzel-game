@@ -91,3 +91,10 @@ h1 {
   display: block;
   pointer-events: none;
 }
+
+#lobby img {
+  width: 150px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
