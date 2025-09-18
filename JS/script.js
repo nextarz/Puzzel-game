@@ -212,3 +212,72 @@ function resetGame() {
   shuffleSound.pause(); // stop lagu saat reset
   shuffleSound.currentTime = 0;
 }
+
+// AWSD Request Dari Sepuh Ridhsuki
+
+window.addEventListener("keydown", (e) => {
+  let direction = null;
+
+  switch (e.key) {
+    case "ArrowUp":
+    case "w":
+    case "W":
+      direction = "up";
+      break;
+
+    case "ArrowDown":
+    case "s":
+    case "S":
+      direction = "down";
+      break;
+
+    case "ArrowLeft":
+    case "a":
+    case "A":
+      direction = "left";
+      break;
+
+    case "ArrowRight":
+    case "d":
+    case "D":
+      direction = "right";
+      break;
+  }
+
+  if (direction) {
+    moveTileByKeyboard(direction);
+    e.preventDefault();
+  }
+});
+
+function moveTileByKeyboard(direction) {
+  const emptyTile = findEmptyTile();
+  if (!emptyTile) return;
+
+  const { row: emptyR, col: emptyC } = emptyTile;
+  let targetR = emptyR;
+  let targetC = emptyC;
+
+  if (direction === "up") targetR++;
+  if (direction === "down") targetR--;
+  if (direction === "left") targetC++;
+  if (direction === "right") targetC--;
+
+  if (isWithinBoard(targetR, targetC)) {
+    [board[emptyR][emptyC], board[targetR][targetC]] = [board[targetR][targetC], null];
+    renderBoard();
+  }
+}
+
+function findEmptyTile() {
+  for (let r = 0; r < board.length; r++) {
+    for (let c = 0; c < board[0].length; c++) {
+      if (board[r][c] === null) return { row: r, col: c };
+    }
+  }
+  return null;
+}
+
+function isWithinBoard(r, c) {
+  return r >= 0 && r < board.length && c >= 0 && c < board[0].length;
+}
